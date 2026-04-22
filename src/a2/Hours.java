@@ -9,6 +9,7 @@ public class Hours implements TimeUnit {
 	}
 	
 	//getSeconds Methode
+	@Override
 	public int getSeconds() {
 		return hours * 3600;
 	}

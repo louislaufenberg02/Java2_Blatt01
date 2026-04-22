@@ -11,6 +11,7 @@ public class Seconds implements TimeUnit {
 	//getSeconds Methode
 	
 	//Getters und Setters
+	@Override
 	public int getSeconds() {
 		return seconds;
 	}

@@ -1,12 +1,13 @@
 package a4;
 
-public class Electronics implements Discountable {
-	double price;
+public class Electronic implements Discountable {
+	private double price;
 	
-	public Electronics (double price) {
+	public Electronic (double price) {
 		this.price = price;
 	}
-
+	
+	@Override
 	public double getPrice() {
 		return price;
 	}
@@ -17,6 +18,6 @@ public class Electronics implements Discountable {
 	
 	@Override
 	public double getDiscountPrice() {
-		return getPrice() * (1 - 0.2);
+		return getPrice() * 0.8;
 	}
 }

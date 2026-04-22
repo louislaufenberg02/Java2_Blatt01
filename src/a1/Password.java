@@ -7,6 +7,7 @@ public class Password implements Comparable<String> {
 		this.value = value;
 	}
 	
+	@Override
 	public int compareTo (String o) {
 		//Überprüfen ob value länger ist als o -> 1.
 		if(this.value.length() > o.length()) return 1;
@@ -18,8 +19,8 @@ public class Password implements Comparable<String> {
 		int sumDigitsValue = 0;
 		int sumDigitsO = 0;
 		for(int i = 0; i < value.length(); i++) {
-			if (Character.isDigit(value.charAt(i)) == true) sumDigitsValue++;
-			if (Character.isDigit(o.charAt(i)) == true) sumDigitsO++;
+			if (Character.isDigit(value.charAt(i))) sumDigitsValue++;
+			if (Character.isDigit(o.charAt(i))) sumDigitsO++;
 		}
 		
 		//value mehr Ziffernals o -> 1; value weniger Ziffern als 0 -> -1; value genau so viele Ziffern wie o -> 0.

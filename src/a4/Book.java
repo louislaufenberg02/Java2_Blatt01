@@ -6,7 +6,8 @@ public class Book implements Discountable {
 	public Book (double price) {
 		this.price = price;
 	}
-
+	
+	@Override
 	public double getPrice() {
 		return price;
 	}

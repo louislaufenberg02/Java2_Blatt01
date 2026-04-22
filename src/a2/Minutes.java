@@ -9,6 +9,7 @@ public class Minutes implements TimeUnit {
 	}
 	
 	//getSeconds Methode
+	@Override
 	public int getSeconds() {
 		return minutes * 60;
 	}
@@ -17,7 +18,7 @@ public class Minutes implements TimeUnit {
 	public int getMinutes() {
 		return minutes;
 	}
-	public void setMinutes(int hours) {
-		this.minutes = hours;
+	public void setMinutes(int minutes) {
+		this.minutes = minutes;
 	}
 }

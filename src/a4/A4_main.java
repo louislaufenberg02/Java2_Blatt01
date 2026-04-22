@@ -2,14 +2,22 @@ package a4;
 
 public class A4_main {
 	public static void main(String[] args) {
-		Discountable eins = new Book(3.0);
-		Discountable zwei = new Book(6.0);
-		Discountable drei = new Electronics(5.0);
-		Discountable vier = new Electronics(8.0);
+		Discountable b1 = new Book(50.0);
+		Discountable e1 = new Electronic(100.0);
+
+		System.out.println(b1.getPrice() + " | " + b1.getDiscountPrice()); // 50 | 45
+		System.out.println(e1.getPrice() + " | " + e1.getDiscountPrice()); // 100 | 80
 		
-		System.out.println(eins.getPrice() + " | " + eins.getDiscountPrice());
-		System.out.println(zwei.getPrice() + " | " + zwei.getDiscountPrice());
-		System.out.println(drei.getPrice() + " | " + drei.getDiscountPrice());
-		System.out.println(vier.getPrice() + " | " + vier.getDiscountPrice());
+		Discountable b2 = new Book(100.0);
+		Discountable e2 = new Electronic(100.0);
+
+		System.out.println(b2.getDiscountPrice()); // 90.0
+		System.out.println(e2.getDiscountPrice()); // 80.0
+		
+		Discountable b3 = new Book(0.0);
+		Discountable e3 = new Electronic(0.0);
+
+		System.out.println(b3.getDiscountPrice()); // 0
+		System.out.println(e3.getDiscountPrice()); // 0
 	}
 }

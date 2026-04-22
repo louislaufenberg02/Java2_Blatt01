@@ -9,14 +9,8 @@ public class A3_main {
 	}
 	
 	public static Shape createShape(char type, double a, double b) {
-		if(type == 'c') {
-			Shape x = new Circle(a);
-			return x;
-		}
-		if( type == 'r') {
-			Shape x = new Rectangle(a,b);
-			return x;
-		}
-		return null;
+		if(type == 'c') return new Circle(a);
+		else if( type == 'r') return new Rectangle(a,b);
+		else return null;
 	}
 }
